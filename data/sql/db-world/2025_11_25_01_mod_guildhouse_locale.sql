@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS `mod_guildhouse_locale` (
   PRIMARY KEY (`Id`, `Locale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DELETE FROM `mod_guildhouse_locale` WHERE `Id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 30, 31, 100, 101, 102, 103, 104);
+
 INSERT INTO `mod_guildhouse_locale` (`Id`, `Locale`, `Text`) VALUES
 -- 1: Guild creation
 (1, 'enUS', 'You now own a guild. You can purchase a Guild House!'),
