@@ -802,7 +802,11 @@ public:
 
     void OnBeforeWorldObjectSetPhaseMask(WorldObject const* worldObject, uint32 & /*oldPhaseMask*/, uint32 & /*newPhaseMask*/, bool &useCombinedPhases, bool & /*update*/) override
     {
-        if (worldObject->GetZoneId() == 876)
+        // El vendedor y el teletransportador son comunes a todas las hermandades: deben
+        // seguir el phasing combinado normal en vez de la comparación exacta de GM Island.
+        if (worldObject->GetEntry() == GetCreatureEntry(0) || worldObject->GetEntry() == 190000)
+            useCombinedPhases = true;
+        else if (worldObject->GetZoneId() == 876)
             useCombinedPhases = false;
         else
             useCombinedPhases = true;

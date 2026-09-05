@@ -1,5 +1,9 @@
 !.gitignore
 
+# AI assistant artifacts
+CLAUDE.md
+.claude/
+
 #
 #Generic
 #
