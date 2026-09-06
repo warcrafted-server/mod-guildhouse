@@ -804,7 +804,9 @@ public:
     {
         // El vendedor y el teletransportador son comunes a todas las hermandades: deben
         // seguir el phasing combinado normal en vez de la comparación exacta de GM Island.
-        if (worldObject->GetEntry() == GetCreatureEntry(0) || worldObject->GetEntry() == 190000)
+        // GetEntry() lee campos que aún no existen antes de IsInWorld() (crashea durante
+        // GameObject::Create, p.ej. al montar Wintergrasp en el arranque del servidor).
+        if (worldObject->IsInWorld() && (worldObject->GetEntry() == GetCreatureEntry(0) || worldObject->GetEntry() == 190000))
             useCombinedPhases = true;
         else if (worldObject->GetZoneId() == 876)
             useCombinedPhases = false;
