@@ -306,6 +306,7 @@ public:
             // Spawn a portal and the guild house butler automatically as part of purchase.
             SpawnStarterPortal(player);
             SpawnButlerNPC(player);
+            SpawnTeleporterNPC(player);
             CloseGossipMenuFor(player);
         }
 
@@ -471,6 +472,58 @@ public:
         // TODO: is it really necessary to add both the real and DB table guid here ?
         sObjectMgr->AddGameobjectToGrid(guidLow, sObjectMgr->GetGameObjectData(guidLow));
         CloseGossipMenuFor(player);
+    }
+
+    // Entry 0 (por defecto) deja el teletransportador desactivado. Su posición sale de
+    // `guild_house_spawns`, igual que la de todo lo que vende el mayordomo.
+    void SpawnTeleporterNPC(Player* player)
+    {
+        uint32 entry = sConfigMgr->GetOption<int32>("GuildHouseTeleporterEntry", 0);
+        if (!entry)
+            return;
+
+        QueryResult result = WorldDatabase.Query("SELECT `posX`, `posY`, `posZ`, `orientation` FROM `guild_house_spawns` WHERE `entry`={}", entry);
+        if (!result)
+        {
+            LOG_INFO("modules", "GUILDHOUSE: Sin posicion en guild_house_spawns para el teletransportador (entry: {})", entry);
+            return;
+        }
+
+        Field* fields = result->Fetch();
+        float posX = fields[0].Get<float>();
+        float posY = fields[1].Get<float>();
+        float posZ = fields[2].Get<float>();
+        float ori = fields[3].Get<float>();
+
+        Map* map = sMapMgr->FindMap(1, 0);
+        if (!map)
+        {
+            LOG_INFO("modules", "GUILDHOUSE: Mapa 1 no cargado, no se genera el teletransportador (entry: {})", entry);
+            return;
+        }
+
+        Creature* creature = new Creature();
+
+        if (!creature->Create(map->GenerateLowGuid<HighGuid::Unit>(), map, GetGuildPhase(player), entry, 0, posX, posY, posZ, ori))
+        {
+            delete creature;
+            return;
+        }
+
+        creature->SaveToDB(map->GetId(), (1 << map->GetSpawnMode()), GetGuildPhase(player));
+        uint32 lowguid = creature->GetSpawnId();
+
+        creature->CleanupsBeforeDelete();
+        delete creature;
+
+        creature = new Creature();
+        if (!creature->LoadCreatureFromDB(lowguid, map))
+        {
+            delete creature;
+            return;
+        }
+
+        sObjectMgr->AddCreatureToGrid(lowguid, sObjectMgr->GetCreatureData(lowguid));
     }
 
     void SpawnButlerNPC(Player* player)
@@ -802,13 +855,7 @@ public:
 
     void OnBeforeWorldObjectSetPhaseMask(WorldObject const* worldObject, uint32 & /*oldPhaseMask*/, uint32 & /*newPhaseMask*/, bool &useCombinedPhases, bool & /*update*/) override
     {
-        // El vendedor y el teletransportador son comunes a todas las hermandades: deben
-        // seguir el phasing combinado normal en vez de la comparación exacta de GM Island.
-        // GetEntry() lee campos que aún no existen antes de IsInWorld() (crashea durante
-        // GameObject::Create, p.ej. al montar Wintergrasp en el arranque del servidor).
-        if (worldObject->IsInWorld() && (worldObject->GetEntry() == GetCreatureEntry(0) || worldObject->GetEntry() == 190000))
-            useCombinedPhases = true;
-        else if (worldObject->GetZoneId() == 876)
+        if (worldObject->GetZoneId() == 876)
             useCombinedPhases = false;
         else
             useCombinedPhases = true;
