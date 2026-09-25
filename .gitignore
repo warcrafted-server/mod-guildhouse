@@ -3,6 +3,7 @@
 # AI assistant artifacts
 CLAUDE.md
 .claude/
+.agents/
 
 #
 #Generic

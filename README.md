@@ -17,9 +17,9 @@ All guilds will get their own phasing system and then the guild master can purch
 
 ### Purchasables
 
-- Class Trainers (all available in Wrath)
-- Primary Profession Trainers (all available in Wrath)
-- Secondary Profession Trainers (all available in Wrath)
+- Class Trainers (all available in Wrath). Druid, Shaman, Paladin and Warlock trainers also offer the first quest of their class quest chain (e.g. Bear Form, totems, Redemption, demon summoning), same as their real city counterparts.
+- Primary Profession Trainers (all available in Wrath), unified with a vendor selling basic profession supplies (except Herbalism, which has none in the base game).
+- Secondary Profession Trainers (all available in Wrath), unified with a vendor selling basic profession supplies.
 - Vendors: Reagents Vendor, Food & Drink, Trade Goods, Ammo & Repair Vendor, and Poisons Vendor
 - Portals to Neutral, Horde and Alliance cities
 - Spirit Healer

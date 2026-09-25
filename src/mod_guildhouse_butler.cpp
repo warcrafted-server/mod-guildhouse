@@ -81,16 +81,16 @@ public:
         {
         case 2: // Spawn Class Trainer
             ClearGossipMenuFor(player);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_DEATHKNIGHT, player), GOSSIP_SENDER_MAIN, 29195, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_DEATHKNIGHT, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_DRUID, player), GOSSIP_SENDER_MAIN, 26324, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_DRUID, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_HUNTER, player), GOSSIP_SENDER_MAIN, 26325, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_HUNTER, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_MAGE, player), GOSSIP_SENDER_MAIN, 26326, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_MAGE, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_PALADIN, player), GOSSIP_SENDER_MAIN, 26327, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PALADIN, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_PRIEST, player), GOSSIP_SENDER_MAIN, 26328, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PRIEST, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_ROGUE, player), GOSSIP_SENDER_MAIN, 26329, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_ROGUE, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_SHAMAN, player), GOSSIP_SENDER_MAIN, 26330, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_SHAMAN, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_WARLOCK, player), GOSSIP_SENDER_MAIN, 26331, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_WARLOCK, player), GuildHouseTrainer, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_WARRIOR, player), GOSSIP_SENDER_MAIN, 26332, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_WARRIOR, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_DEATHKNIGHT, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(10), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_DEATHKNIGHT, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_DRUID, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(11), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_DRUID, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_HUNTER, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(12), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_HUNTER, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_MAGE, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(13), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_MAGE, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_PALADIN, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(14), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PALADIN, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_PRIEST, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(15), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PRIEST, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_ROGUE, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(16), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_ROGUE, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_SHAMAN, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(17), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_SHAMAN, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_WARLOCK, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(18), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_WARLOCK, player), GuildHouseTrainer, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_TRAINER_WARRIOR, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(19), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_WARRIOR, player), GuildHouseTrainer, false);
             AddGossipItemFor(player, GOSSIP_ICON_CHAT, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_GOSSIP_GO_BACK, player), GOSSIP_SENDER_MAIN, 9);
             SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
             break;
@@ -147,28 +147,28 @@ public:
             break;
         case 7: // Spawn Profession Trainers
             ClearGossipMenuFor(player);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ALCH, player), GOSSIP_SENDER_MAIN, 19052, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ALCH, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_BLACKSMITH, player), GOSSIP_SENDER_MAIN, 2836, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_BLACKSMITH, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENGINEERING, player), GOSSIP_SENDER_MAIN, 8736, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENGINEERING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_TAILORING, player), GOSSIP_SENDER_MAIN, 2627, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_TAILORING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_LEATHERWORKING, player), GOSSIP_SENDER_MAIN, 19187, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_LEATHERWORKING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_SKINNING, player), GOSSIP_SENDER_MAIN, 19180, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_SKINNING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_MINING, player), GOSSIP_SENDER_MAIN, 8128, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_MINING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_HERBALISM, player), GOSSIP_SENDER_MAIN, 908, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_HERBALISM, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ALCH, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(20), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ALCH, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_BLACKSMITH, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(21), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_BLACKSMITH, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENGINEERING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(22), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENGINEERING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_TAILORING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(23), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_TAILORING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_LEATHERWORKING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(24), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_LEATHERWORKING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_SKINNING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(25), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_SKINNING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_MINING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(26), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_MINING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_HERBALISM, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(27), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_HERBALISM, player), GuildHouseProf, false);
 
             if (player->GetTeamId() == TEAM_ALLIANCE)
             {
                 // ALLIANCE players get these options
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENCHANTING, player), GOSSIP_SENDER_MAIN, 18773, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENCHANTING, player), GuildHouseProf, false);
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_JEWELCRAFTING, player), GOSSIP_SENDER_MAIN, 18774, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_JEWELCRAFTING, player), GuildHouseProf, false);
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_INSCRIPTION, player), GOSSIP_SENDER_MAIN, 30721, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_INSCRIPTION, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENCHANTING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(28), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENCHANTING, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_JEWELCRAFTING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(30), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_JEWELCRAFTING, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_INSCRIPTION, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(32), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_INSCRIPTION, player), GuildHouseProf, false);
             }
             else
             {
                 // HORDE players get these options
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENCHANTING, player), GOSSIP_SENDER_MAIN, 18753, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENCHANTING, player), GuildHouseProf, false);
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_JEWELCRAFTING, player), GOSSIP_SENDER_MAIN, 18751, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_JEWELCRAFTING, player), GuildHouseProf, false);
-                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_INSCRIPTION, player), GOSSIP_SENDER_MAIN, 30722, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_INSCRIPTION, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_ENCHANTING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(29), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_ENCHANTING, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_JEWELCRAFTING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(31), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_JEWELCRAFTING, player), GuildHouseProf, false);
+                AddGossipItemFor(player, GOSSIP_ICON_TRAINER, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_INSCRIPTION, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(33), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_INSCRIPTION, player), GuildHouseProf, false);
             }
 
             AddGossipItemFor(player, GOSSIP_ICON_CHAT, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_GOSSIP_GO_BACK, player), GOSSIP_SENDER_MAIN, 9);
@@ -176,9 +176,9 @@ public:
             break;
         case 8: // Secondary Profession Trainers
             ClearGossipMenuFor(player);
-            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_FIRSTAID, player), GOSSIP_SENDER_MAIN, 19184, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_FIRSTAID, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_FISHING, player), GOSSIP_SENDER_MAIN, 2834, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_FISHING, player), GuildHouseProf, false);
-            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_COOKING, player), GOSSIP_SENDER_MAIN, 19185, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_COOKING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_FIRSTAID, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(34), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_FIRSTAID, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_FISHING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(35), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_FISHING, player), GuildHouseProf, false);
+            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_PROF_TRAINER_COOKING, player), GOSSIP_SENDER_MAIN, GetCreatureEntry(36), GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_SPAWN_PROF_COOKING, player), GuildHouseProf, false);
             AddGossipItemFor(player, GOSSIP_ICON_CHAT, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_GOSSIP_GO_BACK, player), GOSSIP_SENDER_MAIN, 9);
             SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
             break;
@@ -195,36 +195,36 @@ public:
             cost = GuildHouseInnKeeper;
             SpawnNPC(action, player);
             break;
-        case 26327: // Paladin
-        case 26324: // Druid
-        case 26325: // Hunter
-        case 26326: // Mage
-        case 26328: // Priest
-        case 26329: // Rogue
-        case 26330: // Shaman
-        case 26331: // Warlock
-        case 26332: // Warrior
-        case 29195: // Death Knight
+        case GetCreatureEntry(14): // Paladin
+        case GetCreatureEntry(11): // Druid
+        case GetCreatureEntry(12): // Hunter
+        case GetCreatureEntry(13): // Mage
+        case GetCreatureEntry(15): // Priest
+        case GetCreatureEntry(16): // Rogue
+        case GetCreatureEntry(17): // Shaman
+        case GetCreatureEntry(18): // Warlock
+        case GetCreatureEntry(19): // Warrior
+        case GetCreatureEntry(10): // Death Knight
             cost = GuildHouseTrainer;
             SpawnNPC(action, player);
             break;
-        case 2836:  // Blacksmithing
-        case 8128:  // Mining
-        case 8736:  // Engineering
-        case 18774: // Jewelcrafting (Alliance)
-        case 18751: // Jewelcrafting (Horde)
-        case 18773: // Enchanting (Alliance)
-        case 18753: // Enchanting (Horde)
-        case 30721: // Inscription (Alliance)
-        case 30722: // Inscription (Horde)
-        case 19187: // Leatherworking
-        case 19180: // Skinning
-        case 19052: // Alchemy
-        case 908:   // Herbalism
-        case 2627:  // Tailoring
-        case 19185: // Cooking
-        case 2834:  // Fishing
-        case 19184: // First Aid
+        case GetCreatureEntry(21): // Blacksmithing
+        case GetCreatureEntry(26): // Mining
+        case GetCreatureEntry(22): // Engineering
+        case GetCreatureEntry(30): // Jewelcrafting (Alliance)
+        case GetCreatureEntry(31): // Jewelcrafting (Horde)
+        case GetCreatureEntry(28): // Enchanting (Alliance)
+        case GetCreatureEntry(29): // Enchanting (Horde)
+        case GetCreatureEntry(32): // Inscription (Alliance)
+        case GetCreatureEntry(33): // Inscription (Horde)
+        case GetCreatureEntry(24): // Leatherworking
+        case GetCreatureEntry(25): // Skinning
+        case GetCreatureEntry(20): // Alchemy
+        case GetCreatureEntry(27): // Herbalism
+        case GetCreatureEntry(23): // Tailoring
+        case GetCreatureEntry(36): // Cooking
+        case GetCreatureEntry(35): // Fishing
+        case GetCreatureEntry(34): // First Aid
             cost = GuildHouseProf;
             SpawnNPC(action, player);
             break;

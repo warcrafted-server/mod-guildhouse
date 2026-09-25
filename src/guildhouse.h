@@ -4,6 +4,9 @@
 #include <string>
 
 // Offsets from creatures_objects.sql
+// 0-2: Talamortis (seller), Xrispins (butler), Innkeeper Monica
+// 10-19: class trainers (own creature_template, cloned from real city trainers)
+// 20-36: profession trainers/vendors (own creature_template, cloned from real city trainers)
 constexpr uint32 GetCreatureEntry(uint32 offset)
 {
     return 500030 + offset;
