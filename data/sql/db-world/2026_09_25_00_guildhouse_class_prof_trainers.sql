@@ -156,8 +156,9 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 DELETE FROM `creature_queststarter` WHERE `id` IN (@C_TEMPLATE + 11, @C_TEMPLATE + 14, @C_TEMPLATE + 17, @C_TEMPLATE + 18);
 
 INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES
-	-- Druid: Bear Form (10), Aquatic Form (16)
+	-- Druid: Bear Form (10), Aquatic Form (16), Lessons Anew (14, mismo questgiver que Bear Form)
 	(@C_TEMPLATE + 11, 5921), (@C_TEMPLATE + 11, 5922), (@C_TEMPLATE + 11, 30), (@C_TEMPLATE + 11, 31),
+	(@C_TEMPLATE + 11, 6121), (@C_TEMPLATE + 11, 6126),
 	-- Paladin: Redemption (12)
 	(@C_TEMPLATE + 14, 9598), (@C_TEMPLATE + 14, 9600),
 	-- Shaman: Call of Earth (4, Horda + Draenei), Call of Fire (10), Call of Water (20), Call of Air (30, Horda + Draenei)
