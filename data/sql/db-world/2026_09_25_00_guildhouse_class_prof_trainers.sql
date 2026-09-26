@@ -136,6 +136,10 @@ DELETE FROM `npc_vendor` WHERE `entry` IN (@C_TEMPLATE + 20, @C_TEMPLATE + 21, @
 
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES
 	(@C_TEMPLATE + 20, 0, 3371, 0, 0, 0),   -- Alchemy: Empty Vial
+	(@C_TEMPLATE + 20, 0, 3372, 0, 0, 0),   -- Alchemy: Leaded Vial
+	(@C_TEMPLATE + 20, 0, 8925, 0, 0, 0),   -- Alchemy: Crystal Vial
+	(@C_TEMPLATE + 20, 0, 18256, 0, 0, 0),  -- Alchemy: Imbued Vial
+	(@C_TEMPLATE + 20, 0, 40411, 0, 0, 0),  -- Alchemy: Enchanted Vial
 	(@C_TEMPLATE + 21, 0, 5956, 0, 0, 0),   -- Blacksmithing: Blacksmith Hammer
 	(@C_TEMPLATE + 21, 0, 2880, 0, 0, 0),   -- Blacksmithing: Weak Flux
 	(@C_TEMPLATE + 22, 0, 4359, 0, 0, 0),   -- Engineering: Handful of Copper Bolts
