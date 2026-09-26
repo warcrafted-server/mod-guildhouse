@@ -18,7 +18,7 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 	(@C_TEMPLATE + 17, 0, 0, 0, 0, 0, 'Shaman Trainer', NULL, NULL, 0, 70, 70, 0, 35, 50, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 2, 768, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 18, 0, 0, 0, 0, 0, 'Warlock Trainer', NULL, NULL, 0, 70, 70, 0, 35, 50, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 8, 768, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 19, 0, 0, 0, 0, 0, 'Warrior Trainer', NULL, NULL, 0, 70, 70, 0, 35, 48, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 1, 768, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
--- Profession trainers/vendors (offset 20-36). npcflag real + 128 (VENDOR), excepto Herbalism (sin vendor, ver nota abajo).
+-- Profession trainers/vendors (offset 20-36). npcflag real + 128 (VENDOR).
 	(@C_TEMPLATE + 20, 0, 0, 0, 0, 0, 'Alchemy Trainer', 'Master Alchemy Trainer', NULL, 0, 63, 63, 0, 1818, 211, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 8, 256, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 21, 0, 0, 0, 0, 0, 'Blacksmithing Trainer', NULL, NULL, 0, 54, 54, 0, 120, 209, 1, 1.14286, 1, 1, 18, 0, 0, 1, 2000, 2000, 1, 1, 1, 512, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1.3, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 22, 0, 0, 0, 0, 0, 'Engineering Trainer', NULL, NULL, 0, 53, 53, 0, 474, 211, 1, 1.14286, 1, 1, 18, 0, 0, 1, 2000, 2000, 1, 1, 1, 0, 2048, 0, 0, 7, 134217728, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1.3, 1, 1, 1, 0, 0, 1, 0, '', 12340),
@@ -26,7 +26,7 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 	(@C_TEMPLATE + 24, 0, 0, 0, 0, 0, 'Leatherworking Trainer', 'Master Leatherworking Trainer', NULL, 0, 63, 63, 0, 1818, 209, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 1, 33024, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1.05, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 25, 0, 0, 0, 0, 0, 'Skinning Trainer', 'Master Skinning Trainer', NULL, 0, 60, 65, 1, 1818, 209, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 1, 33024, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1.05, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 26, 0, 0, 0, 0, 0, 'Mining Trainer', NULL, NULL, 0, 40, 40, 0, 474, 210, 1, 1.14286, 1, 1, 18, 0, 0, 1, 2000, 2000, 1, 1, 1, 0, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1.15, 1, 1, 1, 0, 0, 1, 0, '', 12340),
-	(@C_TEMPLATE + 27, 0, 0, 0, 0, 0, 'Herbalism Trainer', NULL, NULL, 0, 44, 44, 0, 120, 80, 1, 1.14286, 1, 1, 18, 0, 0, 1, 1500, 2000, 1, 1, 1, 0, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1.2, 1, 1, 1, 0, 0, 1, 0, '', 12340),
+	(@C_TEMPLATE + 27, 0, 0, 0, 0, 0, 'Herbalism Trainer', NULL, NULL, 0, 44, 44, 0, 120, 208, 1, 1.14286, 1, 1, 18, 0, 0, 1, 1500, 2000, 1, 1, 1, 0, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1.2, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 28, 0, 0, 0, 0, 0, 'Enchanting Trainer', 'Master Enchanting Trainer', 'Trainer', 0, 60, 60, 0, 1737, 209, 1, 1.14286, 1, 1, 20, 0, 0, 1, 1500, 2000, 1, 1, 2, 512, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 29, 0, 0, 0, 0, 0, 'Enchanting Trainer', 'Master Enchanting Trainer', 'Trainer', 0, 60, 60, 0, 1729, 209, 1, 1.14286, 1, 1, 20, 0, 0, 1, 1500, 2000, 1, 1, 2, 4608, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
 	(@C_TEMPLATE + 30, 0, 0, 0, 0, 0, 'Jewelcrafting Trainer', 'Master Jewelcrafting Trainer', NULL, 0, 60, 60, 0, 1737, 209, 1, 1.14286, 1, 1, 20, 0, 0, 1, 2000, 2000, 1, 1, 2, 512, 2048, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, '', 12340),
@@ -106,53 +106,161 @@ INSERT INTO `creature_default_trainer` (`CreatureId`, `TrainerId`) VALUES
 DELETE FROM `npc_vendor` WHERE `entry` IN (@C_TEMPLATE + 28, @C_TEMPLATE + 29, @C_TEMPLATE + 30, @C_TEMPLATE + 31);
 
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES
-	(@C_TEMPLATE + 28, 0, 4470, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 6217, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 10938, 1, 7200, 0),
-	(@C_TEMPLATE + 28, 0, 10940, 3, 7200, 0),
-	(@C_TEMPLATE + 28, 0, 11291, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 20752, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 20753, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 20758, 0, 0, 0),
-	(@C_TEMPLATE + 28, 0, 22307, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 4470, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 6217, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 10938, 1, 7200, 0),
-	(@C_TEMPLATE + 29, 0, 10940, 4, 7200, 0),
-	(@C_TEMPLATE + 29, 0, 11291, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 20752, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 20753, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 20758, 0, 0, 0),
-	(@C_TEMPLATE + 29, 0, 22307, 0, 0, 0),
-	(@C_TEMPLATE + 30, 0, 20815, 1, 800, 200),
-	(@C_TEMPLATE + 30, 0, 20824, 1, 25000, 6250),
-	(@C_TEMPLATE + 31, 0, 20815, 1, 800, 200),
-	(@C_TEMPLATE + 31, 0, 20824, 1, 25000, 6250);
+	(@C_TEMPLATE + 28, 0, 4470, 0, 0, 0),          -- Madera simple
+	(@C_TEMPLATE + 28, 0, 6217, 0, 0, 0),          -- Vara de cobre
+	(@C_TEMPLATE + 28, 0, 10938, 2, 3600, 0),      -- Esencia mágica inferior
+	(@C_TEMPLATE + 28, 0, 10940, 4, 3600, 0),      -- Polvo extraño
+	(@C_TEMPLATE + 28, 0, 11291, 0, 0, 0),         -- Madera de estrella
+	(@C_TEMPLATE + 28, 0, 20752, 0, 0, 0),         -- Fórmula: Aceite mágico menor
+	(@C_TEMPLATE + 28, 0, 20753, 0, 0, 0),         -- Fórmula: Aceite de hechicero inferior
+	(@C_TEMPLATE + 28, 0, 20758, 0, 0, 0),         -- Fórmula: Aceite de hechicero menor
+	(@C_TEMPLATE + 28, 0, 22307, 0, 0, 0),         -- Patrón: Bolsa encantada de tela arcana
+	(@C_TEMPLATE + 28, 0, 6338, 1, 604800, 0),     -- Vara de plata
+	(@C_TEMPLATE + 28, 0, 11128, 1, 604800, 0),    -- Vara dorada
+	(@C_TEMPLATE + 28, 0, 11144, 1, 604800, 0),    -- Vara de veraplata
+	(@C_TEMPLATE + 28, 0, 25844, 1, 604800, 0),    -- Vara de adamantita
+	(@C_TEMPLATE + 28, 0, 16206, 1, 604800, 0),    -- Vara de arcanita
+	(@C_TEMPLATE + 28, 0, 41741, 1, 604800, 0),    -- Vara de cobalto
+	(@C_TEMPLATE + 28, 0, 25843, 1, 604800, 0),    -- Vara de hierro vil
+	(@C_TEMPLATE + 28, 0, 25845, 1, 604800, 0),    -- Vara de eternio
+	(@C_TEMPLATE + 28, 0, 41745, 1, 604800, 0),    -- Vara de titanio
+	(@C_TEMPLATE + 29, 0, 4470, 0, 0, 0),          -- Madera simple
+	(@C_TEMPLATE + 29, 0, 6217, 0, 0, 0),          -- Vara de cobre
+	(@C_TEMPLATE + 29, 0, 10938, 2, 3600, 0),      -- Esencia mágica inferior
+	(@C_TEMPLATE + 29, 0, 10940, 4, 3600, 0),      -- Polvo extraño
+	(@C_TEMPLATE + 29, 0, 11291, 0, 0, 0),         -- Madera de estrella
+	(@C_TEMPLATE + 29, 0, 20752, 0, 0, 0),         -- Fórmula: Aceite mágico menor
+	(@C_TEMPLATE + 29, 0, 20753, 0, 0, 0),         -- Fórmula: Aceite de hechicero inferior
+	(@C_TEMPLATE + 29, 0, 20758, 0, 0, 0),         -- Fórmula: Aceite de hechicero menor
+	(@C_TEMPLATE + 29, 0, 22307, 0, 0, 0),         -- Patrón: Bolsa encantada de tela arcana
+	(@C_TEMPLATE + 29, 0, 6338, 1, 604800, 0),     -- Vara de plata
+	(@C_TEMPLATE + 29, 0, 11128, 1, 604800, 0),    -- Vara dorada
+	(@C_TEMPLATE + 29, 0, 11144, 1, 604800, 0),    -- Vara de veraplata
+	(@C_TEMPLATE + 29, 0, 25844, 1, 604800, 0),    -- Vara de adamantita
+	(@C_TEMPLATE + 29, 0, 16206, 1, 604800, 0),    -- Vara de arcanita
+	(@C_TEMPLATE + 29, 0, 41741, 1, 604800, 0),    -- Vara de cobalto
+	(@C_TEMPLATE + 29, 0, 25843, 1, 604800, 0),    -- Vara de hierro vil
+	(@C_TEMPLATE + 29, 0, 25845, 1, 604800, 0),    -- Vara de eternio
+	(@C_TEMPLATE + 29, 0, 41745, 1, 604800, 0),    -- Vara de titanio
+	(@C_TEMPLATE + 30, 0, 20815, 1, 800, 200),     -- Herramientas de joyero
+	(@C_TEMPLATE + 30, 0, 20824, 1, 25000, 6250),  -- Pulidora sencilla
+	(@C_TEMPLATE + 31, 0, 20815, 1, 800, 200),     -- Herramientas de joyero
+	(@C_TEMPLATE + 31, 0, 20824, 1, 25000, 6250);  -- Pulidora sencilla
 
--- Vendor: articulos basicos para las 12 profesiones sin datos reales que copiar (Herbalism excluida,
--- es pura recoleccion sin item propio en el juego). Para anadir/cambiar articulos de cualquiera de
--- estos vendors: editar aqui por el entry correspondiente, nunca tocar el npc_vendor de un NPC real.
-DELETE FROM `npc_vendor` WHERE `entry` IN (@C_TEMPLATE + 20, @C_TEMPLATE + 21, @C_TEMPLATE + 22, @C_TEMPLATE + 23, @C_TEMPLATE + 24, @C_TEMPLATE + 25, @C_TEMPLATE + 26, @C_TEMPLATE + 32, @C_TEMPLATE + 33, @C_TEMPLATE + 34, @C_TEMPLATE + 35, @C_TEMPLATE + 36);
+-- Vendor: articulos basicos para el resto de profesiones. Para anadir/cambiar articulos de
+-- cualquiera de estos vendors: editar aqui por el entry correspondiente, nunca tocar el
+-- npc_vendor de un NPC real.
+DELETE FROM `npc_vendor` WHERE `entry` IN (@C_TEMPLATE + 20, @C_TEMPLATE + 21, @C_TEMPLATE + 22, @C_TEMPLATE + 23, @C_TEMPLATE + 24, @C_TEMPLATE + 25, @C_TEMPLATE + 26, @C_TEMPLATE + 27, @C_TEMPLATE + 32, @C_TEMPLATE + 33, @C_TEMPLATE + 34, @C_TEMPLATE + 35, @C_TEMPLATE + 36);
 
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES
-	(@C_TEMPLATE + 20, 0, 3371, 0, 0, 0),   -- Alchemy: Empty Vial
-	(@C_TEMPLATE + 20, 0, 3372, 0, 0, 0),   -- Alchemy: Leaded Vial
-	(@C_TEMPLATE + 20, 0, 8925, 0, 0, 0),   -- Alchemy: Crystal Vial
-	(@C_TEMPLATE + 20, 0, 18256, 0, 0, 0),  -- Alchemy: Imbued Vial
-	(@C_TEMPLATE + 20, 0, 40411, 0, 0, 0),  -- Alchemy: Enchanted Vial
-	(@C_TEMPLATE + 21, 0, 5956, 0, 0, 0),   -- Blacksmithing: Blacksmith Hammer
-	(@C_TEMPLATE + 21, 0, 2880, 0, 0, 0),   -- Blacksmithing: Weak Flux
-	(@C_TEMPLATE + 22, 0, 4359, 0, 0, 0),   -- Engineering: Handful of Copper Bolts
-	(@C_TEMPLATE + 23, 0, 2996, 0, 0, 0),   -- Tailoring: Bolt of Linen Cloth
-	(@C_TEMPLATE + 24, 0, 2320, 0, 0, 0),   -- Leatherworking: Coarse Thread
-	(@C_TEMPLATE + 25, 0, 7005, 0, 0, 0),   -- Skinning: Skinning Knife
-	(@C_TEMPLATE + 26, 0, 2901, 0, 0, 0),   -- Mining: Mining Pick
-	(@C_TEMPLATE + 32, 0, 39505, 0, 0, 0),  -- Inscription (Alliance): Virtuoso Inking Set
-	(@C_TEMPLATE + 33, 0, 39505, 0, 0, 0),  -- Inscription (Horde): Virtuoso Inking Set
-	(@C_TEMPLATE + 34, 0, 1251, 0, 0, 0),   -- First Aid: Linen Bandage
-	(@C_TEMPLATE + 35, 0, 6256, 0, 0, 0),   -- Fishing: Fishing Pole
-	(@C_TEMPLATE + 35, 0, 6529, 0, 0, 0),   -- Fishing: Shiny Bauble
-	(@C_TEMPLATE + 36, 0, 2678, 0, 0, 0);   -- Cooking: Mild Spices
+	-- Alquimia: viales + pociones básicas de sanación/maná (a petición expresa, aunque en el
+	-- juego real son objetos de Alquimia y no de Primeros Auxilios)
+	(@C_TEMPLATE + 20, 0, 3371, 0, 0, 0),     -- Vial vacío
+	(@C_TEMPLATE + 20, 0, 3372, 0, 0, 0),     -- Vial emplomado
+	(@C_TEMPLATE + 20, 0, 8925, 0, 0, 0),     -- Vial de cristal
+	(@C_TEMPLATE + 20, 0, 18256, 0, 0, 0),    -- Vial imbuido
+	(@C_TEMPLATE + 20, 0, 40411, 0, 0, 0),    -- Vial encantado
+	-- Herrería
+	(@C_TEMPLATE + 21, 0, 5956, 0, 0, 0),     -- Martillo de herrero
+	(@C_TEMPLATE + 21, 0, 2880, 0, 0, 0),     -- Flujo débil
+	(@C_TEMPLATE + 21, 0, 3466, 0, 0, 0),     -- Flujo fuerte
+	(@C_TEMPLATE + 21, 0, 18567, 0, 0, 0),    -- Flujo elemental
+	(@C_TEMPLATE + 21, 0, 2901, 0, 0, 0),     -- Pico de minero
+	(@C_TEMPLATE + 21, 0, 3857, 4, 3600, 0),  -- Carbón
+	(@C_TEMPLATE + 21, 0, 3470, 0, 0, 0),     -- Piedra de amolar burda
+	(@C_TEMPLATE + 21, 0, 3478, 0, 0, 0),     -- Piedra de amolar tosca
+	(@C_TEMPLATE + 21, 0, 3486, 0, 0, 0),     -- Piedra de amolar pesada
+	(@C_TEMPLATE + 21, 0, 7966, 0, 0, 0),     -- Piedra de amolar sólida
+	(@C_TEMPLATE + 21, 0, 12644, 0, 0, 0),    -- Piedra de amolar densa
+	-- Ingeniería
+	(@C_TEMPLATE + 22, 0, 4359, 0, 0, 0),     -- Puñado de pernos de cobre
+	(@C_TEMPLATE + 22, 0, 2880, 0, 0, 0),     -- Flujo débil
+	(@C_TEMPLATE + 22, 0, 4364, 4, 3600, 0),  -- Pólvora burda
+	(@C_TEMPLATE + 22, 0, 4361, 2, 3600, 0),  -- Tubo de cobre
+	(@C_TEMPLATE + 22, 0, 4363, 2, 3600, 0),  -- Modulador de cobre
+	(@C_TEMPLATE + 22, 0, 4371, 2, 3600, 0),  -- Tubo de bronce
+	(@C_TEMPLATE + 22, 0, 4382, 1, 3600, 0),  -- Marco de bronce
+	(@C_TEMPLATE + 22, 0, 4389, 1, 3600, 0),  -- Girocronátomo
+	(@C_TEMPLATE + 22, 0, 4399, 0, 0, 0),     -- Pila de madera
+	(@C_TEMPLATE + 22, 0, 4400, 0, 0, 0),     -- Surtido pesado
+	(@C_TEMPLATE + 22, 0, 4404, 3, 3600, 0),  -- Contacto de plata
+	(@C_TEMPLATE + 22, 0, 40533, 0, 0, 0),    -- Culata de nogal
+	(@C_TEMPLATE + 22, 0, 5956, 0, 0, 0),     -- Martillo de herrero
+	-- Sastrería
+	(@C_TEMPLATE + 23, 0, 2996, 0, 0, 0),     -- Rollo de tela de lino
+	(@C_TEMPLATE + 23, 0, 2320, 0, 0, 0),     -- Hilo burdo
+	(@C_TEMPLATE + 23, 0, 2321, 0, 0, 0),     -- Hilo refinado
+	(@C_TEMPLATE + 23, 0, 4291, 0, 0, 0),     -- Hilo de seda
+	(@C_TEMPLATE + 23, 0, 8343, 0, 0, 0),     -- Hilo de seda grueso
+	(@C_TEMPLATE + 23, 0, 14341, 0, 0, 0),    -- Hilo rúnico
+	(@C_TEMPLATE + 23, 0, 38426, 0, 0, 0),    -- Hilo de eternio
+	(@C_TEMPLATE + 23, 0, 2324, 0, 0, 0),     -- Lejía
+	(@C_TEMPLATE + 23, 0, 2325, 0, 0, 0),     -- Tinte negro
+	(@C_TEMPLATE + 23, 0, 2604, 0, 0, 0),     -- Tinte rojo
+	(@C_TEMPLATE + 23, 0, 2605, 0, 0, 0),     -- Tinte verde
+	(@C_TEMPLATE + 23, 0, 4340, 0, 0, 0),     -- Tinte gris
+	(@C_TEMPLATE + 23, 0, 4341, 0, 0, 0),     -- Tinte amarillo
+	(@C_TEMPLATE + 23, 0, 4342, 0, 0, 0),     -- Tinte morado
+	(@C_TEMPLATE + 23, 0, 6260, 0, 0, 0),     -- Tinte azul
+	(@C_TEMPLATE + 23, 0, 6261, 0, 0, 0),     -- Tinte naranja
+	(@C_TEMPLATE + 23, 0, 10290, 0, 0, 0),    -- Tinte rosa
+	-- Peletería: mismos hilos/tintes que Sastrería + Sal
+	(@C_TEMPLATE + 24, 0, 2320, 0, 0, 0),     -- Hilo burdo
+	(@C_TEMPLATE + 24, 0, 2321, 0, 0, 0),     -- Hilo refinado
+	(@C_TEMPLATE + 24, 0, 4291, 0, 0, 0),     -- Hilo de seda
+	(@C_TEMPLATE + 24, 0, 8343, 0, 0, 0),     -- Hilo de seda grueso
+	(@C_TEMPLATE + 24, 0, 14341, 0, 0, 0),    -- Hilo rúnico
+	(@C_TEMPLATE + 24, 0, 38426, 0, 0, 0),    -- Hilo de eternio
+	(@C_TEMPLATE + 24, 0, 2324, 0, 0, 0),     -- Lejía
+	(@C_TEMPLATE + 24, 0, 2325, 0, 0, 0),     -- Tinte negro
+	(@C_TEMPLATE + 24, 0, 2604, 0, 0, 0),     -- Tinte rojo
+	(@C_TEMPLATE + 24, 0, 2605, 0, 0, 0),     -- Tinte verde
+	(@C_TEMPLATE + 24, 0, 4340, 0, 0, 0),     -- Tinte gris
+	(@C_TEMPLATE + 24, 0, 4341, 0, 0, 0),     -- Tinte amarillo
+	(@C_TEMPLATE + 24, 0, 4342, 0, 0, 0),     -- Tinte morado
+	(@C_TEMPLATE + 24, 0, 6260, 0, 0, 0),     -- Tinte azul
+	(@C_TEMPLATE + 24, 0, 6261, 0, 0, 0),     -- Tinte naranja
+	(@C_TEMPLATE + 24, 0, 10290, 0, 0, 0),    -- Tinte rosa
+	(@C_TEMPLATE + 24, 0, 4289, 0, 0, 0),     -- Sal
+	-- Desuello
+	(@C_TEMPLATE + 25, 0, 7005, 0, 0, 0),     -- Cuchillo para desollar
+	(@C_TEMPLATE + 25, 0, 2318, 4, 3600, 0),  -- Cuero ligero
+	(@C_TEMPLATE + 25, 0, 2319, 2, 3600, 0),  -- Cuero medio
+	-- Minería
+	(@C_TEMPLATE + 26, 0, 2901, 0, 0, 0),     -- Pico de minero
+	(@C_TEMPLATE + 26, 0, 2880, 0, 0, 0),     -- Flujo débil
+	(@C_TEMPLATE + 26, 0, 18567, 0, 0, 0),    -- Flujo elemental
+	(@C_TEMPLATE + 26, 0, 3857, 4, 3600, 0),  -- Carbón
+	(@C_TEMPLATE + 26, 0, 20824, 1, 25000, 6250), -- Pulidora sencilla
+	-- Herboristería
+	(@C_TEMPLATE + 27, 0, 2447, 4, 3600, 0),  -- Flor de paz
+	(@C_TEMPLATE + 27, 0, 765, 4, 3600, 0),   -- Hojaplata
+	-- Inscripción (Alianza / Horda)
+	(@C_TEMPLATE + 32, 0, 39505, 0, 0, 0),    -- Juego de caligrafía de virtuoso
+	(@C_TEMPLATE + 32, 0, 10648, 0, 0, 0),    -- Papiro común
+	(@C_TEMPLATE + 32, 0, 39354, 0, 0, 0),    -- Papiro ligero
+	(@C_TEMPLATE + 32, 0, 39501, 0, 0, 0),    -- Papiro pesado
+	(@C_TEMPLATE + 32, 0, 39502, 0, 0, 0),    -- Papiro resistente
+	(@C_TEMPLATE + 33, 0, 39505, 0, 0, 0),    -- Juego de caligrafía de virtuoso
+	(@C_TEMPLATE + 33, 0, 10648, 0, 0, 0),    -- Papiro común
+	(@C_TEMPLATE + 33, 0, 39354, 0, 0, 0),    -- Papiro ligero
+	(@C_TEMPLATE + 33, 0, 39501, 0, 0, 0),    -- Papiro pesado
+	(@C_TEMPLATE + 33, 0, 39502, 0, 0, 0),    -- Papiro resistente
+	-- Primeros auxilios: venda + pociones de sanación/maná básicas (a petición expresa)
+	(@C_TEMPLATE + 34, 0, 1251, 0, 0, 0),     -- Venda de lino
+	(@C_TEMPLATE + 34, 0, 118, 4, 3600, 0),   -- Poción de sanación menor
+	(@C_TEMPLATE + 34, 0, 2455, 4, 3600, 0),  -- Poción de maná menor
+	(@C_TEMPLATE + 34, 0, 858, 2, 3600, 0),   -- Poción de sanación inferior
+	(@C_TEMPLATE + 34, 0, 3385, 2, 3600, 0),  -- Poción de maná inferior
+	-- Pesca
+	(@C_TEMPLATE + 35, 0, 6256, 0, 0, 0),     -- Caña de pescar
+	(@C_TEMPLATE + 35, 0, 6529, 0, 0, 0),     -- Adorno lustroso
+	(@C_TEMPLATE + 35, 0, 6365, 1, 86400, 0), -- Caña de pescar fuerte
+	(@C_TEMPLATE + 35, 0, 6530, 0, 0, 0),     -- Reptadores nocturnos
+	(@C_TEMPLATE + 35, 0, 6532, 0, 0, 0),     -- Adornos brillantes
+	(@C_TEMPLATE + 35, 0, 6533, 2, 86400, 0), -- Atrapapeces acuadinámico
+	-- Cocina
+	(@C_TEMPLATE + 36, 0, 2678, 0, 0, 0);     -- Especias suaves
 
 -- Quest: solo la primera mision de cada cadena de clase con cadena real y jugable (Druid, Shaman,
 -- Paladin, Warlock). El jugador la inicia aqui y sigue la cadena en el mundo con normalidad.
