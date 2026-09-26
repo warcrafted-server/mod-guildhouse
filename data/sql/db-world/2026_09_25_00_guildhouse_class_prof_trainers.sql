@@ -142,10 +142,10 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 	(@C_TEMPLATE + 29, 0, 25843, 1, 604800, 0),    -- Vara de hierro vil
 	(@C_TEMPLATE + 29, 0, 25845, 1, 604800, 0),    -- Vara de eternio
 	(@C_TEMPLATE + 29, 0, 41745, 1, 604800, 0),    -- Vara de titanio
-	(@C_TEMPLATE + 30, 0, 20815, 1, 800, 200),     -- Herramientas de joyero
-	(@C_TEMPLATE + 30, 0, 20824, 1, 25000, 6250),  -- Pulidora sencilla
-	(@C_TEMPLATE + 31, 0, 20815, 1, 800, 200),     -- Herramientas de joyero
-	(@C_TEMPLATE + 31, 0, 20824, 1, 25000, 6250);  -- Pulidora sencilla
+	(@C_TEMPLATE + 30, 0, 20815, 0, 0, 0),     -- Herramientas de joyero
+	(@C_TEMPLATE + 30, 0, 20824, 0, 0, 0),  -- Pulidora sencilla
+	(@C_TEMPLATE + 31, 0, 20815, 0, 0, 0),     -- Herramientas de joyero
+	(@C_TEMPLATE + 31, 0, 20824, 0, 0, 0);  -- Pulidora sencilla
 
 -- Vendor: articulos basicos para el resto de profesiones. Para anadir/cambiar articulos de
 -- cualquiera de estos vendors: editar aqui por el entry correspondiente, nunca tocar el
@@ -231,7 +231,7 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 	(@C_TEMPLATE + 26, 0, 2880, 0, 0, 0),     -- Flujo débil
 	(@C_TEMPLATE + 26, 0, 18567, 0, 0, 0),    -- Flujo elemental
 	(@C_TEMPLATE + 26, 0, 3857, 4, 3600, 0),  -- Carbón
-	(@C_TEMPLATE + 26, 0, 20824, 1, 25000, 6250), -- Pulidora sencilla
+	(@C_TEMPLATE + 26, 0, 20824, 0, 0, 0), -- Pulidora sencilla
 	-- Herboristería
 	(@C_TEMPLATE + 27, 0, 2447, 4, 3600, 0),  -- Flor de paz
 	(@C_TEMPLATE + 27, 0, 765, 4, 3600, 0),   -- Hojaplata
@@ -260,7 +260,16 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 	(@C_TEMPLATE + 35, 0, 6532, 0, 0, 0),     -- Adornos brillantes
 	(@C_TEMPLATE + 35, 0, 6533, 2, 86400, 0), -- Atrapapeces acuadinámico
 	-- Cocina
-	(@C_TEMPLATE + 36, 0, 2678, 0, 0, 0);     -- Especias suaves
+	(@C_TEMPLATE + 36, 0, 2678, 0, 0, 0),     -- Especias suaves
+	(@C_TEMPLATE + 36, 0, 2692, 0, 0, 0),     -- Especias picantes
+	(@C_TEMPLATE + 36, 0, 3713, 0, 0, 0),     -- Especias calmantes
+	(@C_TEMPLATE + 36, 0, 43007, 0, 0, 0),    -- Especias norteñas
+	(@C_TEMPLATE + 36, 0, 30817, 0, 0, 0),    -- Harina simple
+	(@C_TEMPLATE + 36, 0, 159, 0, 0, 0),      -- Agua de manantial refrescante
+	(@C_TEMPLATE + 36, 0, 1179, 0, 0, 0),     -- Leche helada
+	(@C_TEMPLATE + 36, 0, 2596, 0, 0, 0),     -- Odre de cerveza enana
+	(@C_TEMPLATE + 36, 0, 44835, 0, 0, 0),    -- Hierbas otoñales
+	(@C_TEMPLATE + 36, 0, 44853, 0, 0, 0);    -- Miel
 
 -- Quest: solo la primera mision de cada cadena de clase con cadena real y jugable (Druid, Shaman,
 -- Paladin, Warlock). El jugador la inicia aqui y sigue la cadena en el mundo con normalidad.
@@ -285,3 +294,28 @@ INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES
 	(@C_TEMPLATE + 18, 1758),
 	(@C_TEMPLATE + 18, 7601),
 	(@C_TEMPLATE + 18, 7581);
+
+-- Menús de gossip propios. Con gossip_menu_id=0 el core usa el menú genérico, que ofrece
+-- "olvidar talentos" a cualquier trainer (también a los de profesión). Van en este fichero y no
+-- en uno aparte porque cualquier cambio aquí lo reaplica y pisaría un UPDATE hecho en otro.
+-- Sin el flag GOSSIP (1) el cliente abre directamente la venta o el trainer, sin menú.
+DELETE FROM `gossip_menu` WHERE `MenuID` BETWEEN 500050 AND 500059;
+DELETE FROM `gossip_menu_option` WHERE `MenuID` BETWEEN 500050 AND 500059;
+
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES
+	(500050, 68), -- Instructores de clase
+	(500051, 68); -- Instructores de profesión
+
+INSERT INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionBroadcastTextID`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `ActionPoiID`, `BoxCoded`, `BoxMoney`, `BoxText`, `BoxBroadcastTextID`, `VerifiedBuild`) VALUES
+	(500050, 0, 3, 'Train me!', 3266, 5, 16, 0, 0, 0, 0, '', 0, 0),
+	(500050, 1, 0, 'I wish to unlearn my talents.', 62295, 1, 1, 9791, 0, 0, 0, '', 0, 0),
+	(500051, 0, 1, 'I want to browse your goods.', 3370, 3, 128, 0, 0, 0, 0, '', 0, 0),
+	(500051, 1, 3, 'Train me!', 3266, 5, 16, 0, 0, 0, 0, '', 0, 0);
+
+UPDATE `creature_template` SET `npcflag` = `npcflag` | 1, `gossip_menu_id` = 500050 WHERE `entry` BETWEEN @C_TEMPLATE + 10 AND @C_TEMPLATE + 19;
+UPDATE `creature_template` SET `npcflag` = `npcflag` | 1, `gossip_menu_id` = 500051 WHERE `entry` BETWEEN @C_TEMPLATE + 20 AND @C_TEMPLATE + 36;
+
+UPDATE `creature_template` SET `name` = 'Rosalind Jarraespumosa', `subname` = 'Tabernera' WHERE `entry` = @C_TEMPLATE + 2;
+
+-- Cámara de hermandad: adelantada ~1,5 m según su orientación, quedaba dentro de la pared.
+UPDATE `guild_house_spawns` SET `posX` = 16229.0, `posY` = 16283.7 WHERE `entry` = 187293;
