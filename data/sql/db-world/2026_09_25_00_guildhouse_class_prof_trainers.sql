@@ -68,7 +68,8 @@ INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`,
 	(@C_TEMPLATE + 35, 0, 7172, 1, 1, 0),
 	(@C_TEMPLATE + 36, 0, 18627, 1, 1, 0);
 
--- Se reutilizan los TrainerId reales (contenido de solo lectura: lista de spells a enseñar).
+-- Se reutilizan los TrainerId reales (solo lectura). Los de profesión son los que enseñan todos
+-- los rangos, de Aprendiz a Gran Maestro, no los del NPC de ciudad clonado.
 -- No se modifica `trainer`/`trainer_spell`, solo se apunta un nuevo creature_template hacia ellos.
 DELETE FROM `creature_default_trainer` WHERE `CreatureId` BETWEEN @C_TEMPLATE + 10 AND @C_TEMPLATE + 36;
 
@@ -83,23 +84,23 @@ INSERT INTO `creature_default_trainer` (`CreatureId`, `TrainerId`) VALUES
 	(@C_TEMPLATE + 17, 14),
 	(@C_TEMPLATE + 18, 31),
 	(@C_TEMPLATE + 19, 1),
-	(@C_TEMPLATE + 20, 66),
-	(@C_TEMPLATE + 21, 60),
-	(@C_TEMPLATE + 22, 92),
-	(@C_TEMPLATE + 23, 74),
-	(@C_TEMPLATE + 24, 62),
-	(@C_TEMPLATE + 25, 101),
-	(@C_TEMPLATE + 26, 80),
-	(@C_TEMPLATE + 27, 69),
-	(@C_TEMPLATE + 28, 95),
-	(@C_TEMPLATE + 29, 95),
-	(@C_TEMPLATE + 30, 112),
-	(@C_TEMPLATE + 31, 112),
-	(@C_TEMPLATE + 32, 120),
-	(@C_TEMPLATE + 33, 120),
-	(@C_TEMPLATE + 34, 83),
-	(@C_TEMPLATE + 35, 98),
-	(@C_TEMPLATE + 36, 77);
+	(@C_TEMPLATE + 20, 65),
+	(@C_TEMPLATE + 21, 59),
+	(@C_TEMPLATE + 22, 89),
+	(@C_TEMPLATE + 23, 72),
+	(@C_TEMPLATE + 24, 63),
+	(@C_TEMPLATE + 25, 102),
+	(@C_TEMPLATE + 26, 78),
+	(@C_TEMPLATE + 27, 71),
+	(@C_TEMPLATE + 28, 94),
+	(@C_TEMPLATE + 29, 94),
+	(@C_TEMPLATE + 30, 111),
+	(@C_TEMPLATE + 31, 111),
+	(@C_TEMPLATE + 32, 119),
+	(@C_TEMPLATE + 33, 119),
+	(@C_TEMPLATE + 34, 81),
+	(@C_TEMPLATE + 35, 97),
+	(@C_TEMPLATE + 36, 75);
 
 -- Vendor: solo los 4 que ya venden en el juego real (Enchanting/Jewelcrafting), copiado literal.
 -- Para el resto de profesiones, ver los items básicos añadidos más abajo.
@@ -309,6 +310,7 @@ INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES
 INSERT INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionBroadcastTextID`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `ActionPoiID`, `BoxCoded`, `BoxMoney`, `BoxText`, `BoxBroadcastTextID`, `VerifiedBuild`) VALUES
 	(500050, 0, 3, 'Train me!', 3266, 5, 16, 0, 0, 0, 0, '', 0, 0),
 	(500050, 1, 0, 'I wish to unlearn my talents.', 62295, 1, 1, 9791, 0, 0, 0, '', 0, 0),
+	(500050, 2, 0, 'Learn about Dual Talent Specialization.', 33762, 20, 1, 10371, 0, 0, 0, '', 0, 0),
 	(500051, 0, 1, 'I want to browse your goods.', 3370, 3, 128, 0, 0, 0, 0, '', 0, 0),
 	(500051, 1, 3, 'Train me!', 3266, 5, 16, 0, 0, 0, 0, '', 0, 0);
 
@@ -317,5 +319,7 @@ UPDATE `creature_template` SET `npcflag` = `npcflag` | 1, `gossip_menu_id` = 500
 
 UPDATE `creature_template` SET `name` = 'Rosalind Jarraespumosa', `subname` = 'Tabernera' WHERE `entry` = @C_TEMPLATE + 2;
 
--- Cámara de hermandad: adelantada ~1,5 m según su orientación, quedaba dentro de la pared.
-UPDATE `guild_house_spawns` SET `posX` = 16229.0, `posY` = 16283.7 WHERE `entry` = 187293;
+-- Cámara de hermandad: el modelo 187293 solo existía aquí y no se ve bien en el cliente HD; se usa
+-- el 187299, el de las ciudades neutrales. REPLACE por id porque `entry` es UNIQUE en la tabla.
+REPLACE INTO `guild_house_spawns` (`id`, `entry`, `posX`, `posY`, `posZ`, `orientation`, `comment`) VALUES
+	(45, 187299, 16227.3, 16283.9, 13.9061, 3, 'Guild Vault (Object)');
