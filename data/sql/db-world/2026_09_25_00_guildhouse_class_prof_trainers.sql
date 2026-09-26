@@ -320,6 +320,6 @@ UPDATE `creature_template` SET `npcflag` = `npcflag` | 1, `gossip_menu_id` = 500
 UPDATE `creature_template` SET `name` = 'Rosalind Jarraespumosa', `subname` = 'Tabernera' WHERE `entry` = @C_TEMPLATE + 2;
 
 -- Cámara de hermandad: el modelo 187293 solo existía aquí y no se ve bien en el cliente HD; se usa
--- el 187299, el de las ciudades neutrales. REPLACE por id porque `entry` es UNIQUE en la tabla.
+-- el 193086, el de Dalaran. REPLACE por id porque `entry` es UNIQUE en la tabla.
 REPLACE INTO `guild_house_spawns` (`id`, `entry`, `posX`, `posY`, `posZ`, `orientation`, `comment`) VALUES
-	(45, 187299, 16227.3, 16283.9, 13.9061, 3, 'Guild Vault (Object)');
+	(45, 193086, 16229.0, 16283.7, 13.9061, 3, 'Guild Vault (Object)');

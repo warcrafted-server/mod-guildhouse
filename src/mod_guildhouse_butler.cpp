@@ -109,7 +109,7 @@ public:
             ClearGossipMenuFor(player);
             AddGossipItemFor(player, GOSSIP_ICON_TALK, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_OBJECT_FORGE, player), GOSSIP_SENDER_MAIN, 1685, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_ADD_FORGE, player), GuildHouseObject, false);
             AddGossipItemFor(player, GOSSIP_ICON_TALK, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_OBJECT_ANVIL, player), GOSSIP_SENDER_MAIN, 4087, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_ADD_ANVIL, player), GuildHouseObject, false);
-            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_OBJECT_GUILD_VAULT, player), GOSSIP_SENDER_MAIN, 187299, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_ADD_GUILD_VAULT, player), GuildHouseObject, false);
+            AddGossipItemFor(player, GOSSIP_ICON_MONEY_BAG, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_OBJECT_GUILD_VAULT, player), GOSSIP_SENDER_MAIN, 193086, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_ADD_GUILD_VAULT, player), GuildHouseObject, false);
             AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_OBJECT_BARBER_CHAIR, player), GOSSIP_SENDER_MAIN, 191028, GetGuildHouseLocaleText(GUILDHOUSE_TEXT_CONFIRM_ADD_BARBER_CHAIR, player), GuildHouseObject, false);
 
             if (player->GetTeamId() == TEAM_ALLIANCE)
@@ -251,7 +251,7 @@ public:
             break;
         case 1685:   // Forge
         case 4087:   // Anvil
-        case 187299: // Guild Vault
+        case 193086: // Guild Vault
         case 191028: // Barber Chair
             cost = GuildHouseObject;
             SpawnObject(action, player);
